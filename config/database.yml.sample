@@ -1,0 +1,15 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  username: your_username
+  password: your_password
+  host: localhost
+
+development:
+  <<: *default
+  database: nuuvem_development
+  
+test:
+  <<: *default
+  database: nuuvem_test
