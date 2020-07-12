@@ -1,13 +1,19 @@
 h2.title Importar arquivo 
+= notice
 
-= form_with(url: sales_path, method: :post, multipart: true) do
+= form_with(url: sales_import_file_path, method: :post, multipart: true) do
   .buttons
     = file_field_tag :file
   .buttons
     = submit_tag 'Importar', class: 'import-button'
 
+- unless @total_price.blank?
+  p O valor total da compra foi: 
+  = @total_price
+
 - unless @sales.empty?
   h3 Arquivos já importados anteriormente
+  
   table
     thead
       tr
