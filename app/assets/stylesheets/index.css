@@ -1,19 +1,14 @@
-h2, h3, body {
-  font-family: "Open Sans", sans-serif; 
-}
-
-body {
-  margin-left: 32px;
-}
-
-.title {
-}
-
-.import-label {
+.title{
+  margin-top: 32px;
+  font-weight: 600;
 }
 
 .buttons{
   margin-top: 16px;
+}
+
+.import-file{
+  font-size: 14px;
 }
 
 .import-button {

@@ -12,6 +12,8 @@ gem 'jbuilder', '~> 2.7'
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'slim', '~> 4.0.1'
 gem 'bootsnap', '>= 1.4.2', require: false
+gem 'bootstrap', '~> 4.5.0'
+gem 'jquery-rails'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
