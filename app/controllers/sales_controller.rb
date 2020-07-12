@@ -8,7 +8,8 @@ class SalesController < ApplicationController
   end
 
   def import_file
-    raise 'Arquivo não encontrado' unless params[:file].present?
+    raise 'No file found.' unless params[:file].present?
+    raise 'Invalid file.' unless
 
     total_price = create_sale_and_count_prince(params[:file])
     redirect_to sales_path(total_price: total_price), notice: 'Sales uploaded successfully'
@@ -37,5 +38,9 @@ class SalesController < ApplicationController
     end
 
     total_price
+  end
+
+  def content_type_valid?
+    %w(text/csv application/octet-stream application/vnd.ms-excel).include?(params[:file].content_type)
   end
 end
