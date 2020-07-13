@@ -13,4 +13,9 @@
 #  updated_at       :datetime         not null
 #
 class Sale < ApplicationRecord
+
+  validates :item_price, numericality: true
+  validates :purchase_count, numericality: { only_integer: true }
+  validates :purchaser_name, :item_description, :merchant_name,
+            :merchant_address, presence: true
 end
