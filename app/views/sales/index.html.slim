@@ -1,22 +1,17 @@
 .container
   .col-12
-    h4.title Importar arquivo 
+    h4.title Import your sale file 🧾
     = notice
 
     = form_with(url: sales_import_file_path, method: :post, multipart: true) do
-      .buttons
+      .top-pattern
         = file_field_tag :file, class: 'import-file'
-      .buttons
-        = submit_tag 'Importar', class: 'import-button'
-
-  .col-12
-    - unless @total_price.blank?
-      p O valor total da compra foi: 
-      = @total_price
+      .top-pattern
+        = submit_tag 'Import', class: 'import-button'
   
   .col-12
     - unless @sales.empty?
-      h5.title Arquivos já importados anteriormente
+      h5.title Registered sales
       table.table
         thead
           tr
