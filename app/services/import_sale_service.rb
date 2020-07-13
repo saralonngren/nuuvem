@@ -10,7 +10,6 @@ class ImportSaleService
   end 
 
   def run
-    content_type_valid?
     create_sale_and_count_prince
   end
 
@@ -28,11 +27,7 @@ class ImportSaleService
         merchant_name: sale['merchant name']
       )
     end
-  end
 
-  private
-
-  def content_type_valid?
-    %w(text/csv application/octet-stream application/vnd.ms-excel text/tab-separated-values).include?(@content_type)
+    true
   end
 end 
