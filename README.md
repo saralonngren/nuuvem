@@ -1,6 +1,6 @@
 # Nuuvem
 
-## Especificações
+## Especificações e como instalar
 
 - Ruby 2.6.3
 - Rails 6.0.3.2
@@ -29,3 +29,7 @@ Os gemfiles que foram adicionados que não vêm, por padrão, ao iniciar um proj
 - `'bootstrap'` - Para adicionar o bootstrap
 - `'rspec-rails'` - Para realizar testes utilizando rspec
 - `'annotate'` - Para poder visualizar melhor os dados cadastrados no banco de dados ao acessar uma model.
+
+## Próximos passos
+- Internacionalizar, com o I18n, as respostas enviadas.
+- Inserir o oAuth
