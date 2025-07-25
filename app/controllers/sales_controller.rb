@@ -3,6 +3,19 @@ class SalesController < ApplicationController
     @sales = Sale.all
   end
 
+  def new
+    @sale = Sale.new
+  end
+
+  def create
+    @sale = Sale.new(sale_params)
+    if @sale.save
+      redirect_to sales_path, notice: 'Sale created successfully'
+    else
+      render :new
+    end
+  end
+
   def import_file
     raise 'File not found.' unless params[:file].present?
 
