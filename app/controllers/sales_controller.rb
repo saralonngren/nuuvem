@@ -32,4 +32,6 @@ class SalesController < ApplicationController
                   notice: "Sales uploaded successfully 🥳 Your total gross income is #{import.total_price}"
     end
   end
+
+  dfaeroiweroisefasdif 
 end
