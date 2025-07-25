@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class SalesController < ApplicationController
   def index
     @sales = Sale.all
