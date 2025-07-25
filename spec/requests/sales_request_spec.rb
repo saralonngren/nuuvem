@@ -8,7 +8,7 @@ RSpec.describe "Sales", type: :request do
     end  
 
     subject :post_create_sale do
-      post '/sales', params: params
+      post '/sales'
     end
 
     before do 
