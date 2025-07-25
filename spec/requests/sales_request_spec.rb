@@ -7,6 +7,10 @@ RSpec.describe "Sales", type: :request do
       post '/sales/import_file', params: params
     end  
 
+    subject :post_create_sale do
+      post '/sales', params: params
+    end
+
     before do 
       post_import_file
     end
