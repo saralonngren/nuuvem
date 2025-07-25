@@ -7,6 +7,8 @@ class SalesController < ApplicationController
     @sale = Sale.new
   end
 
+  asfuhasifughodaufghisudfg
+
   def create
     @sale = Sale.new(sale_params)
     if @sale.save
