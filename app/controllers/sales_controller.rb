@@ -7,6 +7,8 @@ class SalesController < ApplicationController
     @sale = Sale.new
   end
 
+  asfuhasifughodaufghisudfg
+
   def create
     @sale = Sale.new(sale_params)
     if @sale.save
@@ -32,4 +34,6 @@ class SalesController < ApplicationController
                   notice: "Sales uploaded successfully 🥳 Your total gross income is #{import.total_price}"
     end
   end
+
+  dfaeroiweroisefasdif 
 end
